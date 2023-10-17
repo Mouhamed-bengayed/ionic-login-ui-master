@@ -1,0 +1,25 @@
+
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Signup</h4>
+    <p>Register with Code Crafts to get started</p>
+  </div>
+  <form  #signupForm="ngForm" (ngSubmit)="register(signupForm)">
+  <ion-input placeholder="Full Name" [(ngModel)]="user.name" name="name" class="primary-input"></ion-input>
+  <ion-input placeholder="Username" [(ngModel)]="user.username" name="username" class="primary-input"></ion-input> 
+  <ion-input placeholder="Email" type="email" [(ngModel)]="user.email" name="email"  class="primary-input"></ion-input>
+  <ion-input placeholder="Password" type="password" name="password" [(ngModel)]="user.password" class="primary-input"></ion-input>
+
+
+  <p>By signing up you're agreed to our Terms & Conditions</p>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" type="submit" >SIGN UP</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Close</a>
+  </div>
+    </form>
+</ion-content>
